@@ -16,10 +16,6 @@
   app.controller('CompanyController', [ "$http", function($http) {
       //make this a variable so we can use it in methods
       var company = this;
-      //initialize products to an empty array so no errors occure on loading
-      //data will be loaded in real time so this is neccessary
-      company.products = [];
-
 
       //set-up http get request to json data and assign it to information
       //upon sucess of getting json file data (the json file) is passed into a fucntion that assigns it to
@@ -30,7 +26,7 @@
     
   }]);
 
-  // define a directive and now we can use product-tabs in the html
+  // define a directive and now we can use products in the html
    app.directive("products", function() {
     return {
       // E is for element we are defining our own element

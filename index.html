@@ -1,3 +1,4 @@
+<!-- define an app -->
 <html ng-app="myCompany">
 
 	<head>
@@ -7,9 +8,11 @@
 		<script type="text/javascript" src="js/app.js"></script>
 	</head>
 
+	<!-- define a controller -->
 	<body ng-controller="CompanyController as company">
 		<div class="container">
 
+			<!-- first example of pulling data from a controller -->
 			<div class="row">
 				
 				<div class="col-md-2 col-md-offset-2 col-xs-4 col-xs-offset-4" id="logo">
@@ -23,6 +26,7 @@
 
 			</div><!--./row-->
 
+			<!-- welcome area is an example of two way data binding -->
 			<div class="row welcomeArea">
 				<div class="col-md-3 col-md-offset-2">
 				 <input type="text" ng-model="name" placeholder="Enter a name here" class="form-control">
@@ -34,6 +38,7 @@
 
 			</div><!--./row-->
 
+			<!-- we can use a custom html tag because of our angular E directive -->
 			<products></products>
 
 		</div><!--./container-->
