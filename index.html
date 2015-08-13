@@ -12,8 +12,8 @@
 
 			<div class="row">
 				
-				<div class="col-md-2 col-md-offset-2 col-xs-4 col-xs-offset-4 well" id="logo">
-					<img ng-src="{{company.information.logo}}" class="img-resonsive">
+				<div class="col-md-2 col-md-offset-2 col-xs-4 col-xs-offset-4" id="logo">
+					<img ng-src="{{company.information.logo}}" class="img-resonsive companyLogo">
 				</div><!--./col-md-2-->
 
 				<div class="col-md-6 col-xs-12 text-center" id="companyInfo">
@@ -34,19 +34,7 @@
 
 			</div><!--./row-->
 
-			<div class="row well" ng-repeat="product in company.products">
-				
-				<div class="col-md-2 col-md-offset-2">
-					<img ng-src="{{product.image}}" class="img-responsive">
-				</div><!--./col-md-2-->
-
-				<div class="col-md-6 text-center product">
-					<h3>{{product.name}}</h3>
-					<h4>{{product.price | currency}}</h4>
-					<h4>Toppings: {{product.toppings}}</h4>
-				</div><!--col-md-2-->
-
-			</div><!--./row-->
+			<products></products>
 
 		</div><!--./container-->
 	</body>

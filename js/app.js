@@ -27,11 +27,28 @@
       $http.get('company-information.json').success( function(data) {
         company.information = data;
       });
-
-      $http.get('company-products.json').success( function(data) {
-        company.products = data;
-      });
     
-    }]);
+  }]);
+
+  // define a directive and now we can use product-tabs in the html
+   app.directive("products", function() {
+    return {
+      // E is for element we are defining our own element
+      // A is for attribute if you were to use directive as an attribute
+      restrict: "E",
+      //point to html file
+      templateUrl: "products.html",
+      //add in a controller
+      controller: ["$http", function($http) {
+        var company = this;
+
+        $http.get('company-products.json').success( function(data) {
+          company.products = data;
+        });
+      }],
+      // add an alias for a controller
+      controllerAs: "productsCtrl"
+    };
+  });
 
 })();

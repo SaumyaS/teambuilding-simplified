@@ -10,3 +10,6 @@ input {
 .welcomeArea {
   margin-bottom: 15px;
 }
+.companyLogo {
+  border: 1px black dotted;
+}
